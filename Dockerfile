@@ -5,7 +5,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Update and install packages
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y locales \
+    apt-get install -y locales \
     build-essential \
     cmake \
     ffmpeg \
