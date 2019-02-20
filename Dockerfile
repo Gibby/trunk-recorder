@@ -23,6 +23,5 @@ RUN apt-get update && \
 RUN git clone https://github.com/robotastic/trunk-recorder.git /opt/trunk-recorder-src && \
     mkdir -p /opt/recorder && \
     cd /opt/recorder && \
-    cmake /opt/trunk-recorder-src && \
-    make && \
-    rm -fr /opt/trunk-recorder-src
+    BUILD_SHARED_LIBS=false cmake /opt/trunk-recorder-src && \
+    make
