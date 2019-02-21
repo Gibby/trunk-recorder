@@ -21,7 +21,7 @@ RUN apt-get update && \
 
 # Get and build trunk-recorder
 RUN git clone https://github.com/robotastic/trunk-recorder.git /opt/trunk-recorder-src && \
-    mkdir -p /opt/recorder && \
-    cd /opt/recorder && \
+    mkdir -p /home/radio/trunk-player && \
+    cd /home/radio/trunk-player && \
     BUILD_SHARED_LIBS=false cmake /opt/trunk-recorder-src && \
     make
